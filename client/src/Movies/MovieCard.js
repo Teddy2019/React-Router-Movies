@@ -1,10 +1,11 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const MovieCard = props => {
-      const { title, director, metascore, stars } = movie;
+
+      const { title, director, metascore, stars } = props.movie;
 
     return (
-      <Link to={`/movies/${movie.id}`} className="movie-card">
+      <Link to={`/movies/${props.id}`} >
         <h2>{title}</h2>
         <div className="movie-director">
           Director: <em>{director}</em>
