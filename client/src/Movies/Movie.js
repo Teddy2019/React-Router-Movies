@@ -37,6 +37,11 @@ export default class Movie extends Component {
     addToSavedList(this.state.movie)
   }
 
+  clickHandeler = (e)=>{
+    e.preventDefault();;
+    this.saveMovie();
+  }
+
   render() {
     if (!this.state.movie) {
       return <div>Loading movie information...</div>;
@@ -45,6 +50,7 @@ export default class Movie extends Component {
     return (
       <div className="save-wrapper">
         <MovieCard className="movie-card"  key={this.state.movie.id} movie={this.state.movie} />
+        <div className="save-button" onClick= {this.clickHandeler} >Save</div>
       </div>
     );
   }
