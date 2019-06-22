@@ -46,6 +46,7 @@ Link .movie-card {
 }
 .saved-active {
   color: blue;
+  background: red;
   border: 1px solid grey;
   padding: 5px;
 }
